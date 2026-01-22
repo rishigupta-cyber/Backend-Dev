@@ -1,0 +1,5 @@
+Operating System: win32
+CPU Model: 13th Gen Intel(R) Core(TM) i5-13450HX
+Available Memory: 13814034432
+Total Memory: 25463480320
+------------------------------
