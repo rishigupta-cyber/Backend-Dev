@@ -1,1 +1,1 @@
-This is original line 
+Line changed in branch2 
