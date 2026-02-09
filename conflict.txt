@@ -1,1 +1,1 @@
-Line changed in branch1 
+Line resolved after conflict
