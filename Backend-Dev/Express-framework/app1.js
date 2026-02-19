@@ -4,19 +4,15 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Parse form data
 app.use(express.urlencoded({ extended: true }));
 
-// Set EJS
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// GET → show contact form
 app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
-// POST → handle submitted form
 app.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
 
