@@ -1,5 +1,0 @@
-INFO Server started
-WARNING Low memory
-ERROR Database failed
-INFO Request received
-ERROR Timeout
