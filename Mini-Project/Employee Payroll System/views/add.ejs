@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- TOP HEADER -->
+<div class="topbar">
+  <div class="logo">
+    <img src="/logo.png" alt="logo">
+    <div class="logo-text">
+      <span class="emp">EMPLOYEE</span>
+      <span class="pay">PAYROLL</span>
+    </div>
+  </div>
+</div>
+
+<!-- FORM CARD -->
+<div class="form-card">
+
+  <h2>Employee Payroll Form</h2>
+
+  <form method="POST" action="/add">
+
+    <!-- Name -->
+    <div class="form-row">
+      <span class="form-label">Name</span>
+      <input type="text" name="name" required>
+    </div>
+
+    <!-- Profile Image -->
+    <div class="form-row">
+      <span class="form-label">Profile Image</span>
+
+      <div class="avatar-group">
+        <label class="avatar-option">
+          <input type="radio" name="avatar" value="avatar1.jpg" required>
+          <img src="/avatar1.jpg">
+        </label>
+
+        <label class="avatar-option">
+          <input type="radio" name="avatar" value="avatar2.jpg">
+          <img src="/avatar2.jpg">
+        </label>
+
+        <label class="avatar-option">
+          <input type="radio" name="avatar" value="avatar3.jpg">
+          <img src="/avatar3.jpg">
+        </label>
+
+        <label class="avatar-option">
+          <input type="radio" name="avatar" value="avatar4.jpg">
+          <img src="/avatar4.jpg">
+        </label>
+      </div>
+    </div>
+
+    <!-- Gender -->
+    <div class="form-row">
+      <span class="form-label">Gender</span>
+
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="gender" value="Male" required>
+          Male
+        </label>
+
+        <label>
+          <input type="radio" name="gender" value="Female">
+          Female
+        </label>
+      </div>
+    </div>
+
+    <!-- Department -->
+    <div class="form-row">
+  <span class="form-label">Department</span>
+
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="department" value="HR"> HR</label>
+    <label><input type="checkbox" name="department" value="Sales"> Sales</label>
+    <label><input type="checkbox" name="department" value="Finance"> Finance</label>
+    <label><input type="checkbox" name="department" value="Engineer"> Engineer</label>
+    <label><input type="checkbox" name="department" value="Others"> Others</label>
+  </div>
+</div>
+    <!-- Salary -->
+    <div class="form-row">
+  <span class="form-label">Salary</span>
+
+  <select name="salary" class="select-field" required>
+    <option value="">Select Salary</option>
+    <option value="10000">10000</option>
+    <option value="20000">20000</option>
+    <option value="30000">30000</option>
+    <option value="40000">40000</option>
+  </select>
+</div>
+
+    <!-- Start Date -->
+    <div class="form-row">
+  <span class="form-label">Start Date</span>
+
+  <div class="date-group">
+    <select name="day" required>
+      <option value="">Day</option>
+      <% for(let i=1;i<=31;i++){ %>
+        <option value="<%= i %>"><%= i %></option>
+      <% } %>
+    </select>
+
+    <select name="month" required>
+      <option value="">Month</option>
+      <% for(let i=1;i<=12;i++){ %>
+        <option value="<%= i %>"><%= i %></option>
+      <% } %>
+    </select>
+
+    <select name="year" required>
+      <option value="">Year</option>
+      <% for(let i=1990;i<=2030;i++){ %>
+        <option value="<%= i %>"><%= i %></option>
+      <% } %>
+    </select>
+  </div>
+</div>
+
+    <!-- Notes -->
+    <div class="form-row">
+      <span class="form-label">Notes</span>
+      <textarea name="notes" class="textarea-field"></textarea>
+    </div>
+
+    <!-- Buttons -->
+    <div class="actions">
+      <a href="/" class="cancel-btn">Cancel</a>
+
+      <div class="right-buttons">
+        <button type="submit" class="outline-btn">Submit</button>
+        <button type="reset" class="outline-btn">Reset</button>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>
