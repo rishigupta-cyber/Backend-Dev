@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1771687998703,
+    "name": "Rishi Gupta",
+    "gender": "Male",
+    "department": "HR",
+    "salary": 10000,
+    "startDate": "21-12-2008",
+    "avatar": "avatar4.jpg"
+  },
+  {
+    "id": 1771688150538,
+    "name": "srijan",
+    "gender": "Female",
+    "department": "HR, Finance",
+    "salary": 20000,
+    "startDate": "21-12-2007",
+    "avatar": "avatar1.jpg"
+  },
+  {
+    "id": 1771688594031,
+    "name": "qea",
+    "gender": "Male",
+    "department": "Sales",
+    "salary": 20000,
+    "startDate": "19-10-2005",
+    "avatar": "avatar2.jpg"
+  }
+]

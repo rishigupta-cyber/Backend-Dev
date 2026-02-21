@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Employee</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Top Header -->
+<div class="topbar">
+  <div class="logo">
+    <img src="/logo.png" alt="logo">
+    <span>EMPLOYEE<br>PAYROLL</span>
+  </div>
+</div>
+
+
+<!-- Form Card -->
+<div class="form-card">
+
+  <h2>Employee Payroll Form</h2>
+
+  <form method="POST" action="/edit/<%= employee.id %>">
+
+    <!-- Name -->
+    <label>Name</label>
+    <input type="text" name="name" value="<%= employee.name %>" required>
+
+
+    <!-- Gender -->
+    <label>Gender</label>
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="gender" value="Male" <%= employee.gender === 'Male' ? 'checked' : '' %>>
+        Male
+      </label>
+
+      <label>
+        <input type="radio" name="gender" value="Female" <%= employee.gender === 'Female' ? 'checked' : '' %>>
+        Female
+      </label>
+    </div>
+
+
+    <!-- Department -->
+    <label>Department</label>
+    <input type="text" name="department" value="<%= employee.department %>" required>
+
+
+    <!-- Salary -->
+    <label>Basic Salary</label>
+    <input type="number" name="salary" value="<%= employee.salary %>" required>
+
+
+    <!-- Start Date -->
+    <label>Start Date</label>
+    <input type="date" name="startDate" value="<%= employee.startDate %>" required>
+
+
+    <!-- Buttons -->
+    <div class="actions">
+
+      <a href="/" class="cancel-btn">
+        Cancel
+      </a>
+
+      <button type="submit" class="submit-btn">
+        Update
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>
