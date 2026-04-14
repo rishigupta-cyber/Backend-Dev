@@ -19,7 +19,7 @@ db.students.updateOne(
 { $set: { department: "Mathematics" } }
 )
 
-=================================QUIERIES==================================
+=================================QUERIES==================================
 
 1. db.students.aggregate([
 {
